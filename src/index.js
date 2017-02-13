@@ -1,7 +1,6 @@
 var Stomp = require('stompjs/lib/stomp.js').Stomp,
     SockJS = require('sockjs-client'),
-    config = require('./config.js'),
-    stompUrl = 'http://itonis-portal.nangu.tv:15674/stomp';
+    config = require('./config.js');
 
 module.exports = {
     logger: logger,
