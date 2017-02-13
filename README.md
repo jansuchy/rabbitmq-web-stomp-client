@@ -23,5 +23,6 @@ Build and serve the JS application:
 
 Point your browser to http://localhost:8080 and test in JS console:
 
-    log = app.logger("my-client");
     app.logview(function(msg) { console.info("Received: " + m); });
+    log = app.logger("my-client");
+    log("Hello, world!");
