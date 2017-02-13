@@ -1,10 +1,15 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = {
-    entry: ['expose?app!./src/index.js'],
+    entry: [
+        './src/index.js'
+    ],
     output: {
-        path: './dist',
-        filename: 'index_bundle.js'
+        path: path.join(__dirname, 'dist'),
+        filename: 'index_bundle.js',
+        libraryTarget: 'var',
+        library: 'app'
     },
     module: {
         loaders: [
